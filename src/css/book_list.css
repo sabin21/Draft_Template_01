@@ -1,0 +1,242 @@
+
+.breadcrumb-list {
+    @apply relative w-[800px] mt-2 mb-4;
+    img { @apply max-w-full; }
+}
+.card-list-wrap{
+    @apply relative w-full flex flex-wrap justify-between;
+    .pagination-1 { @apply relative w-[314px] h-[28px] mx-auto mt-16; }
+  }
+.card-book-wrap {
+    margin-top:4rem;
+    .book {
+      width: 206px; height: 309px;
+      margin-left: auto; margin-right: auto; position: relative; perspective: 1000px;
+      box-shadow: 12px 12px 20px rgba(0,0,0,0.15); 
+    }
+   .book-image { width: 100%; height: auto; display: block; }
+   .book-back { background-color: #999; }
+    
+    .book-inner, .book-pages::before, .book-pages::after {
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+   transform-origin: left center; transition: transform 0.2s ease-in;
+    }
+   .book-cover, .book-pages { transform-style: preserve-3d; }
+  .book-cover { background-size:cover; background-position:center;}
+    .book-pages {
+      transform: scale(0.95, 0.9); perspective: 2000px;
+    
+      &::before, &::after {
+        background-color: #fff;
+        background-image: linear-gradient(to right, rgba(#000, 0.2), rgba(#000, 0.075) 97%, transparent);
+        box-shadow: 1px 4px 5px 0 rgba(#000, 0.05); content: "";
+      }
+    }
+    
+    .book-cover::before { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; }
+   .book-back, .book-pages { right: 0; bottom: 0; }
+    .book-pages {
+      &::after { transition-delay: 0.12s; }
+      &::before { transition-delay: 0.105s; }
+    }
+    
+    .book-pages + .book-pages {
+      &::after { transition-delay: 0.09s; }
+      &::before { transition-delay: 0.075s; }
+    }
+    
+    .book-pages + .book-pages + .book-pages {
+      &::after {
+        transition-delay: 0.06s;
+      }
+      &::before {
+        transition-delay: 0.045s;
+      }
+    }
+    
+    .book-pages + .book-pages + .book-pages + .book-pages {
+      &::after { transition-delay: 0.03s; }
+      &::before { transition-delay: 0.015s; }
+    }
+    
+    .book:hover {
+      .book-back, .book-cover::before { box-shadow: inset -2px 0 1px rgba(#000, 0.075); }
+   .book-cover { transform: rotateY(-40deg); transform-timing-function: ease-out; transition-delay: 0s; }
+    
+      .book-pages {
+        &::after { transform: rotateY(-12deg); }
+        &::before { transform: rotateY(-8deg); }
+      }
+    
+      .book-pages + .book-pages {
+        &::after { transform: rotateY(-20deg); }
+        &::before { transform: rotateY(-16deg); }
+      }
+    
+      .book-pages + .book-pages + .book-pages {
+        &::after { transform: rotateY(-28deg); }
+        &::before { transform: rotateY(-24deg); }
+      }
+    
+      .book-pages + .book-pages + .book-pages + .book-pages {
+        &::after { transform: rotateY(-36deg); }
+        &::before { transform: rotateY(-32deg); }
+      }
+    }
+    .book-stage{
+      width:290px; height: 377px; display: flex; align-items: center;
+      cursor:pointer;
+    }
+  }
+  .book-info { 
+    width:100%; display:flex; flex-direction:column; padding: 1rem 0 0 0;
+    color:#374151; letter-spacing:-0.02em;
+    span { display: block; }
+    .book-title-big { font-size: 18px; font-weight:bold; letter-spacing:-0.03em;}
+    .book-title-sub { font-size:16px; }
+    .book-links {
+      padding-top: 10px; display:flex;
+      .btn-book-1 { width:114px; }
+      .btn-book-2 { width:22px; margin-left: 18px;}
+    }
+  }
+  #book-01 {
+    .book-stage { background: #EEE7DF; }
+    .book-cover { background-image: url(../../public/img/book/2000-40.jpeg); }
+  }
+  #book-02 {
+    .book-stage { background: #EEE7DF; }
+    .book-cover { background-image: url(../../public/img/book/2000-01.png); }
+  }
+  #book-03 {
+    .book-stage { background: #E8E9DA; }
+    .book-cover { background-image: url(../../public/img/book/dong_1.jpeg); }
+  }
+  #book-04 {
+    .book-stage { background: #D7E4E5; }
+    .book-cover { background-image: url(../../public/img/book/lesson_book_01.jpeg); }
+  }
+  #book-05 {
+    .book-stage { background: #D7E4E5; }
+    .book-cover { background-image: url(../../public/img/book/lesson_book_03.jpeg); }
+  }
+  #book-06 {
+    .book-stage { background: #EAE7E2; }
+    .book-cover { background-image: url(../../public/img/book/new_1.jpeg); }
+  }
+  #book-07 {
+    .book-stage { background: #EDDFEC; }
+    .book-cover { background-image: url(../../public/img/book/interview_book_12.jpeg); }
+  }
+  #book-08 {
+    .book-stage { background: #EEE7DF; }
+    .book-cover { background-image: url(../../public/img/book/2000-30.png); }
+  }
+  #book-09 {
+    .book-stage { background: #EDDFEC; }
+    .book-cover { background-image: url(../../public/img/book/interview_book_10.jpeg); }
+  }
+  #book-10 {
+    .book-stage { background: #E8E9DA; }
+    .book-cover { background-image: url(../../public/img/book/dong_2.jpeg); }
+  }
+  #book-11 {
+    .book-stage { background: #D7E4E5; }
+    .book-cover { background-image: url(../../public/img/book/lesson_book_05.jpeg); }
+  }
+  #book-12 {
+    .book-stage { background: #E8E9DA; }
+    .book-cover { background-image: url(../../public/img/book/dong_3.jpeg); }
+  }
+
+  // Book Detail -------------------
+
+  .detail-wrap {
+    @apply relative w-full max-w-[1304px] flex mx-auto mt-24 mb-24;
+    .left-box{
+      @apply relative w-[464px] ;
+      img { @apply max-w-full; }
+    }
+    .right-box{
+      @apply relative w-[768px] ml-[72px] flex flex-col;
+      .book-title { img { @apply max-w-full; }}
+      .btn-box{
+        @apply w-full flex mt-10 mb-10;
+        .btn-book-read { 
+          @apply w-[500px];
+          img { @apply max-w-full; }
+        }
+        .btn-book-audio { 
+          @apply w-[246px] ml-2;
+          img { @apply max-w-full; } 
+        }
+      }
+      .book-desc {
+        img{ @apply max-w-full; }
+      }
+    }
+  }
+
+  // Book Related -------------------
+  .related-wrap{
+    @apply relative w-full;
+    .related-title-wrap{
+      @apply relative w-full max-w-[1572px] h-[75px] mx-auto mt-24 
+      border-t border-slate-700;
+      h4 { @apply font-bold text-[28px] tracking-tight mt-6; }
+      .btn-list-control {
+        @apply absolute w-[80px] right-2 top-5;
+      }
+    }
+    .related-row{
+      @apply relative w-[1572px] flex grow-0 shrink-0 overflow-hidden 
+      mx-auto;
+      .card-photo {
+        @apply w-[414px] mt-7 ml-8;
+        &:nth-child(1){
+          @apply ml-0 ;
+        } 
+        img{ @apply max-w-full ;}
+      }
+    }
+    .card-book-wrap{
+      @apply mt-8 ml-8;
+      &:nth-child(1){
+        @apply ml-0 ;
+      } 
+    }
+  }
+  .btn-back-list {
+    @apply absolute w-[131px] left-0;
+  }
+
+  // Audio Player -------------------
+
+  .player-wrap{
+    @apply relative w-full max-w-[1572px] h-[660px] mx-auto mt-8
+    bg-gradient-to-r from-[#CAE0ED] to-[#D2EBE9] overflow-hidden
+    rounded-[32px] ;
+    .player-canvas {
+      @apply absolute w-full h-full opacity-20;
+    }
+    .player-skin {
+      @apply absolute w-full h-full;
+      .player-title{
+        @apply absolute w-[153px] top-6 left-8 ;
+      }
+      .btn-player-close {
+        @apply absolute w-12 h-12 rounded-full bg-white right-6 top-4 shadow-lg
+        flex justify-center items-center ;
+      }
+      .skin {
+        @apply absolute w-[1241px] m-auto left-0 right-0 top-0 bottom-0;
+      }
+    }
+  }
+  .book-btn-wrap{
+    @apply relative w-full max-w-[1572px] mx-auto;
+    .btn-book-read{
+      @apply relative block w-[528px] mx-auto mt-5;
+      img { @apply max-w-full ; }
+    } 
+  }

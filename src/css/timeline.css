@@ -1,0 +1,70 @@
+
+.timeline-wrap{
+    @apply relative w-full h-screen min-h-[800px]
+    bg-gradient-to-r from-[#B3A48D] to-[#7D7363];
+    .title{
+        @apply w-[156px] h-[164px] absolute left-12 top-0 z-10;
+    }
+    .util-wrap { 
+        @apply absolute right-7 top-6 flex;
+        .search {
+            @apply w-[342px] h-12 mr-4; 
+        }
+        .btn-timeline-close {
+            @apply w-12 h-12; 
+        }
+    }
+    .back-img{
+        @apply block absolute w-[900px] h-[700px] right-0 top-[50px]
+        bg-cover bg-[url(../../public/img/timeline_back.png)];
+    }
+    .back-year { 
+        @apply block absolute text-[25vmax] text-white 
+        opacity-20 font-light font-times left-[calc(50%-600px)]
+        top-[calc(50%-500px)] tracking-tighter;
+    }
+}
+
+.timeline-main-wrap{
+    @apply absolute w-full h-[420px] bottom-[80px] overflow-hidden;
+    .swiper-slide {
+        @apply relative w-[460px] h-[260px] bg-white/30 text-white
+        rounded-xl px-7 py-5 scale-[0.8] mt-[160px] 
+        transition-[margin] duration-300 drop-shadow-2xl;
+        &::before {
+            @apply content-[''] block absolute w-[16px] h-[160px] bottom-[-160px] mx-auto
+            left-0 right-0 border-t-0 border-t-white
+            border-l-[12px] border-l-transparent
+            border-r-[12px] border-r-transparent transition-all;
+        }
+        .year {
+            @apply text-[36px] font-myeongjo tracking-tight ;
+        }
+        .year-king { @apply ml-2 font-bold ; }
+        .date-info { @apply w-full mb-4 pb-2 border-b; }
+        &.swiper-slide-active {
+            @apply scale-100 bg-white opacity-100 text-gray-900 mt-0;
+            &::before{
+                @apply border-t-[200px] ;
+            }
+            .year {
+                @apply text-[#998969];
+            }
+        }
+    }
+}
+.timeline-track-wrap{
+    @apply absolute w-full h-[84px] bg-[#1F1E1C] left-0 bottom-0;
+    .swiper-slide {
+        @apply relative w-[52px] h-[84px] text-gray-50 flex flex-col justify-center text-center items-center;
+        .dot { @apply absolute block w-[10px] h-[10px] bg-white rounded-2xl mx-auto top-6; }
+        .year-text { @apply w-full text-sm pt-4 font-semibold; }
+        &.swiper-slide-active{
+            .dot{ @apply w-[32px] h-[32px] -top-3 border-[6px] border-[#1F1E1C] bg-[#FFCC67]; }
+            .year-text{
+                @apply text-[#FFCC67] text-lg;
+            }
+        }
+    }
+}
+

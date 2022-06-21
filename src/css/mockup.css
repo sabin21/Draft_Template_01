@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.phone-frame-wrap{
+    @apply w-full bg-slate-100 min-h-screen;
+    .phone-back{
+        @apply block absolute w-[404px] h-[810px] mx-auto left-0 right-0
+        bg-cover bg-center top-20;
+    }
+}
+.phone-iframe {
+    @apply absolute w-[358px] h-[776px] left-[23px] top-[17px]
+    rounded-[42px]; 
+}
+.phone-back-light-gray {
+    background-image:url('../../public/img/mockup/frame_light_gray.png') ;
+}
+.mobile-wrap{
+    @apply relative w-full;
+    .top-spacer {
+        @apply block relative w-full h-10 bg-slate-900;
+    }
+}

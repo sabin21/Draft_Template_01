@@ -1,0 +1,85 @@
+html{ height: 100%;}
+body {
+    background-color: #2A3139; font-family: "IBM Plex Sans"; height:100%;
+    &:before {
+        content:''; display: block; position: absolute; width:100%; height: 674px;
+        background-color: #212830;
+    }
+}
+.wrap-index {
+    position: relative; width:100%; min-height: 420vh; 
+    .concept-wrap{
+        position: absolute; width: calc(100% + 72px); height:100%;
+        background-color: #F2F4F4; z-index: 10; 
+        transition: all 0.3s; left:-100%;
+        .concept-inner-wrap{
+            position: absolute; width: 100%; height:100%; top:0; left:0; 
+            .inin{
+                position: relative; width: 100%; height:100%;                 
+                img { width: 100%; max-width: 1600px; }
+            }            
+            z-index: 20; text-align: center;
+            
+            span { display: block; width:100%; height: 1px; background-color: gray; line-height: 0;}
+            p { width: 100%; text-align: center; padding: 1rem 0; }
+        }
+        .left-bar{
+            position: absolute; width: 72px; height: 100%; right:0; top:0;
+            background-color: #fff; cursor: pointer; 
+            z-index: 20;
+            .title {
+                position: absolute;height: 20px; width: 100vh; font-size: 20px;
+                font-weight: bold; transform-origin: left top; transform: rotateZ(90deg);
+                left: 50px; top: 100px;
+            }
+        }
+        .btn-concept-close{
+            position: absolute; width: 48px; height: 48px; right: 96px; top: 24px;
+            cursor: pointer; z-index: 30;
+            img { max-width: 100%; }
+        }
+    }
+    
+    .inner-wrap{
+        position: absolute; width: calc(100% - 72px); height:100%; right:0;
+        .title-wrap{
+            width:100%; text-align: center; padding: 4rem;
+            .logo { position: relative; width: 130px; margin:3rem auto 0 auto; }
+            h1 { color: #fff;  font-size: 3vw; font-weight: bold; margin-top: 5rem; }
+        }
+        .content-wrap {
+            position: relative; margin:0 auto; margin-top: 4rem;
+            width:100%; max-width: 960px; display: flex; flex-wrap: wrap;
+            justify-content: space-between;
+            .card-wrap{
+                position: relative; width: 100%; max-width: 450px; height: auto;
+                margin-top: 5rem;
+                .card{
+                    width:100%; height:auto; min-height: 337px; overflow: hidden;
+                    background-color: gray; background-size:cover;
+                }
+                p { color:#fff; width:100%; font-size:20px; font-weight: bold; padding-top: 1rem;}
+            }
+        }
+        .links-wrap {
+            position: relative; margin:6rem auto 10rem auto; 
+            width:100%; max-width: 960px; 
+            display: flex; flex-wrap:wrap;
+            ul {
+                width:100%; padding: 2rem 0 4rem 0; color: #fff; display: flex; flex-wrap:wrap;
+                border-top: 2px solid gray; 
+                li{
+                    width:33.333%;
+                    &.title { width:100%; font-size: 20px; font-weight: bold; padding: 0 0 1.5rem 0; }
+                    a{
+                        color: #fff; font-size: 16px; line-height: 40px;
+                        &.dimmed {
+                            color: #000;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}

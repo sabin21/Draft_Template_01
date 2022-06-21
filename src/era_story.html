@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서울역사편찬원</title>
+
+<script src="./js/jquery/jquery-3.4.1.min.js"></script>
+<script src="./js/jquery.scrollify.js"></script>
+<script>
+    jQuery(document).ready(function($){
+        $.scrollify({
+        section : ".era-section",
+        sectionName : "section-name",
+        scrollSpeed: 800
+        });
+        $(".pagination a").on("click",$.scrollify.move);
+    });
+</script>
+</head>
+
+<body>
+  <div class="seoul-header-wrap">
+    <div class="inner">
+      <img src="./img/seoul_header_1.png" class="ele-1">
+      <img src="./img/seoul_header_2.png" class="ele-2">
+      <img src="./img/seoul_header_3.png" class="ele-3">
+    </div>
+  </div>
+  <header class="header" id="site-header">
+    <div class="inner">
+        <a href="a_pc_1.html">
+            <div class="logo wide"></div>
+        </a>
+      <ul class="nav">
+        <li><a href="timeline_pc.html">온라인 서울역사탐방</a></li>
+        <li><a href="book_main.html">미디어북 읽기</a></li>
+        <li><a href="">서울역사 함께하기</a></li>
+        <li><a href="">서울역사편찬원 소개</a></li>
+      </ul>
+      <button class="btn-search">
+        <img src="./img/header_search.png">
+      </button>
+    </div>
+  </header>
+  <div class="main-search-wrap">
+      <img src="./img/main_search.png">
+  </div>
+
+<div class="era-wrap">
+    
+    <section class="era-section era-cover" id="era-cover" data-section-name="era-intro">
+        <span class="header-spacer"></span>
+        <img src="./img/story/cover_title.png" class="era-cover-title">
+    </section>
+
+    <section class="era-section era-head" id="era-01" data-section-name="era-1">
+        <img src="./img/story/era_1_title.png" class="era-title">
+    </section>
+    <section class="era-section era-con" data-section-name="era-1-1">
+        <img src="./img/story/era_1_con_1.png" class="era-con-center">
+    </section>
+    <section class="era-section era-con-half" data-section-name="era-1-2">
+        <span class="half-text">
+            <img src="./img/story/era_1_con_2.png">
+        </span>
+        <span class="half-pict" id="era-1-back1"></span>
+    </section>
+
+    <section class="era-section era-head" id="era-02" data-section-name="era-2">
+        <img src="./img/story/era_2_title.png" class="era-title">
+    </section>
+    <section class="era-section era-con" data-section-name="era-2-1">
+        <img src="./img/story/era_2_con_1.png" class="era-con-center">
+    </section>
+    <section class="era-section era-con-half" data-section-name="era-2-2">
+        <span class="half-pict" id="era-2-back1"></span>
+        <span class="half-text">
+            <img src="./img/story/era_1_con_2.png">
+        </span>    
+    </section>
+
+    <section class="era-section era-head" id="era-03" data-section-name="era-3">
+        <img src="./img/story/era_3_title.png" class="era-title">
+    </section>
+    <section class="era-section era-con" data-section-name="era-3-1">
+        <img src="./img/story/era_3_con_1.png" class="era-con-center">
+    </section>
+    <section class="era-section era-con-half" data-section-name="era-3-2">
+        <span class="half-text">
+            <img src="./img/story/era_1_con_2.png">
+        </span>
+        <span class="half-pict" id="era-3-back1"></span>
+    </section>
+
+    <section class="era-section era-head" id="era-04" data-section-name="era-4">
+        <img src="./img/story/era_4_title.png" class="era-title">
+    </section>
+    <section class="era-section era-con" data-section-name="era-4-1">
+        <img src="./img/story/era_4_con_1.png" class="era-con-center">
+    </section>
+    <section class="era-section era-con-half" data-section-name="era-4-2">
+        <span class="half-pict" id="era-4-back1"></span>
+        <span class="half-text">
+            <img src="./img/story/era_1_con_2.png">
+        </span>    
+    </section>
+
+    <section class="era-section era-head" id="era-05" data-section-name="era-5">
+        <img src="./img/story/era_5_title.png" class="era-title">
+    </section>
+    <section class="era-section era-con" data-section-name="era-5-1">
+        <img src="./img/story/era_5_con_1.png" class="era-con-center">
+    </section>
+    <section class="era-section era-con-half" data-section-name="era-5-2">
+        <span class="half-text">
+            <img src="./img/story/era_1_con_2.png">
+        </span>
+        <span class="half-pict" id="era-5-back1"></span>
+    </section>
+
+    <section class="era-section era-head" id="era-06" data-section-name="era-6">
+        <img src="./img/story/era_6_title.png" class="era-title">
+    </section>
+    <section class="era-section era-con" data-section-name="era-6-1">
+        <img src="./img/story/era_6_con_1.png" class="era-con-center">
+    </section>
+    <section class="era-section era-con-half" data-section-name="era-6-2">
+        <span class="half-pict" id="era-6-back1"></span>
+        <span class="half-text">
+            <img src="./img/story/era_1_con_2.png">
+        </span>    
+    </section>
+
+    <span class="era-nav">
+        <ul class="pagination">
+            <li> <a href="#era-1">선사,고대시대</a> </li>
+            <li> <a href="#era-2">고려시대</a> </li>
+            <li> <a href="#era-3">조선시대</a> </li>
+            <li> <a href="#era-4">개항기</a> </li>
+            <li> <a href="#era-5">일제강점기</a> </li>
+            <li> <a href="#era-6">현대시대</a> </li>
+        </ul>
+    </span>
+</div>
+
+
+
+
+<script>
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.guide-wrap{
+    @apply relative w-full bg-gray-100 min-h-screen;
+    & .guide-head {
+        @apply w-full h-[200px] border-b border-gray-200 bg-white;
+    }
+    & .inner-wrap{
+       @apply relative w-full max-w-[1200px] m-auto;
+    }
+
+        .title-3{
+            @apply text-lg font-bold text-gray-800 w-full mt-11 mb-4;
+        }
+
+}
+.btn {
+    @apply font-medium; 
+    &.primary{
+        @apply text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 
+         dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800;    
+    }
+    &.s-tiny { @apply px-2 py-1 text-xs; }
+    &.s-small { @apply px-3 py-1.5 text-sm; }
+    &.s-normal { @apply px-4 py-2 text-base; }
+    &.s-large { @apply px-6 py-3 text-lg; }
+    &.round{ @apply rounded-md; }
+    &.round-tiny{ @apply rounded-[4px]; }
+    &.round-full{ 
+        @apply rounded-[50px];
+        &.s-tiny { @apply px-3; }
+        &.s-small { @apply px-4; }
+        &.s-normal { @apply px-6; }
+        &.s-large { @apply px-8; }
+    }
+    &.line { @apply text-gray-900 border border-gray-700 ; }
+    &.dark { @apply text-white bg-gray-700 hover:bg-gray-900; }
+}

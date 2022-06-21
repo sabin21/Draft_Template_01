@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서울역사편찬원</title>
+    <link href="./js/aos/aos.css" rel="stylesheet">
+</head>
+<body>
+  <div class="seoul-header-wrap">
+    <div class="inner">
+      <img src="./img/seoul_header_1.png" class="ele-1">
+      <img src="./img/seoul_header_2.png" class="ele-2">
+      <img src="./img/seoul_header_3.png" class="ele-3">
+    </div>
+  </div>
+  <header class="header" id="site-header">
+    <div class="inner">
+        <a href="a_pc_1.html">
+            <div class="logo wide"></div>
+        </a>
+      <ul class="nav">
+        <li><a href="timeline_pc.html">온라인 서울역사탐방</a></li>
+        <li><a href="book_main.html">미디어북 읽기</a></li>
+        <li><a href="">서울역사 함께하기</a></li>
+        <li><a href="">서울역사편찬원 소개</a></li>
+      </ul>
+      <button class="btn-search">
+        <img src="./img/header_search.png">
+      </button>
+    </div>
+  </header>
+  <div class="main-search-wrap">
+      <img src="./img/main_search.png">
+  </div>
+
+  <main class="wrap">
+  <div class="btn-top"></div>
+
+  <section class="section home-hero-wrap">
+     <div class="hero-pict-wrap">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" id="home-hero-pict-1"></div>
+          <div class="swiper-slide" id="home-hero-pict-2"></div>
+          <div class="swiper-slide" id="home-hero-pict-3"></div>
+          <div class="swiper-slide" id="home-hero-pict-4"></div>
+        </div>
+        <div class="home-hero swiper-button-next swiper-btn"></div>
+        <div class="home-hero swiper-button-prev swiper-btn"></div>
+        <div class="home-hero-swiper-pagination"></div>
+     </div>
+     <div class="hero-title-wrap">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./img/slide-1-title.png">
+        </div>
+        <div class="swiper-slide">
+          <img src="./img/slide-2-title.png">
+        </div>
+        <div class="swiper-slide">
+          <img src="./img/slide-3-title.png">
+        </div>
+        <div class="swiper-slide">
+          <img src="./img/slide-4-title.png">
+        </div>
+      </div>
+     </div>
+      <img src="./img/home_hero_badge.png" class="badge">
+      <a href="book_main.html">
+        <img src="./img/btn_home_hero.png" class="btn-hero-read">
+      </a>
+  </section>
+
+  <div class="home-banner-wrap">
+    <a href="timeline_pc.html" class="banner banner-big">
+      <img src="./img/home_banner_1.png">
+    </a>
+    <a href="era_story.html" class="banner banner-big">
+      <img src="./img/home_banner_2.png">
+    </a>
+    <img src="./img/home_banner_3.png" class="banner banner-big">
+    <img src="./img/home_banner_4.png" class="banner">
+    <img src="./img/home_banner_5.png" class="banner">
+  </div>
+
+  <div class="contents-wrap">    
+      <img src="./img/home_block_1.png" class="home-block-1">
+  </div>
+
+  <div class="home-full-wrap">
+    <div class="full-back" id="home-links-back"></div>
+    <img src="./img/home_links.png" class="home-links">
+  </div>
+
+  <img src="./img/home_video_list.png" class="home-sns-con">
+  <img src="./img/home_facebook_list.png" class="home-sns-con">
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+      <img src="./img/footer_1.png" class="footer-1">
+      <img src="./img/footer_2.png" class="footer-2">
+  </div>
+  <div class="footer-bottom">
+    <span>
+        05540 서울특별시 송파구 올림픽로 424.  l (대표) history@seoul.go.kr / 문의: 02-413-9511(답사), 9655(강좌), 9593(서울과역사/사진)
+        <br>
+        © Seoul Historiography Institute. All Rights Reserved. 
+    </span>
+    <img src="./img/footer_3.png" class="footer-3">
+  </div>  
+</footer>
+
+<script src="./js/jquery/jquery-3.4.1.min.js"></script>
+<script src="./js/swiper-bundle.min.js"></script>
+<script src="./js/aos/aos.js"></script>
+<script>
+  const heroPictContainer = document.querySelector('.hero-pict-wrap');
+  const heroTitleContainer = document.querySelector('.hero-title-wrap');
+  
+  const heroPictSwiper = new Swiper(heroPictContainer, {
+    loop:true,
+    effect: "fade",
+    autoplay: {
+      delay: 3000
+    },
+    navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        el: '.home-hero-swiper-pagination',
+        clickable: true,
+      }
+  });
+  const heroTitleSwiper = new Swiper(heroTitleContainer, {
+    loop:true,
+  });
+  heroPictSwiper.controller.control = heroTitleSwiper;
+  heroTitleSwiper.controller.control = heroPictSwiper;
+
+
+</script>
+
+</body>
+</html>
